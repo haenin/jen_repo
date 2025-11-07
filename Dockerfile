@@ -8,7 +8,7 @@
 ## 2. 자동 build 후 jar 파일로 실행되게 수정(멀티 스테이지)
 FROM gradle:8.5-jdk17 AS build
 WORKDIR /app
-COPY src/main/java .
+COPY . .
 
 ## daemon 스레드를 쓰지 않음으로써 불필요한 리소스 낭비를 줄인다.
 ## - gradle 이미지는 기본적으로 백그라운드에서 프로세스(데몬)를 실행
